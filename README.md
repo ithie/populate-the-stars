@@ -2,7 +2,7 @@
 
 Statische Seite zum Spiel ([../sol](../sol)). Kein Build, keine Cookies, kein Tracking. CSS, JavaScript und Schrift stehen inline im HTML, separat liegen nur Bilder.
 
-Live: <https://ithie.github.io/populate-the-stars-promo/> – Deploy per GitHub Actions bei jedem Push auf `main` ([deploy.yml](.github/workflows/deploy.yml)).
+Live: <https://www.populate-the-stars.com/> – Deploy per GitHub Actions bei jedem Push auf `main` ([deploy.yml](.github/workflows/deploy.yml)).
 
 | Datei | Inhalt |
 | --- | --- |
