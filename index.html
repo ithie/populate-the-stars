@@ -7,7 +7,7 @@
         <meta name="description" content="Colonize the solar system and the stars beyond: a pixel-retro space colonization game for iPhone and Mac. Real orbits, probes, colony ships, 1,600 stars – populations grow exponentially until the resources run out. No ads, no tracking." />
         <meta name="theme-color" content="#020205" />
         <link rel="canonical" href="https://ithie.github.io/populate-the-stars-promo/" />
-        <meta name="apple-itunes-app" content="app-id=6826905148" />
+        <!-- At launch (see the App Store badge in the body): <meta name="apple-itunes-app" content="app-id=6826905148" /> -->
         <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png" />
         <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
@@ -19,13 +19,13 @@
         <meta property="og:image" content="https://ithie.github.io/populate-the-stars-promo/assets/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, Earth up close and the spiral galaxy" />
+        <meta property="og:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, a colony world up close and the settled spiral galaxy" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Populate the Stars – Colonize the galaxy" />
         <meta name="twitter:description" content="Pixel-retro space colonization game for iPhone and Mac. No ads, no tracking." />
         <meta name="twitter:image" content="https://ithie.github.io/populate-the-stars-promo/assets/og-image.jpg" />
-        <meta name="twitter:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, Earth up close and the spiral galaxy" />
+        <meta name="twitter:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, a colony world up close and the settled spiral galaxy" />
 
         <script type="application/ld+json">
             {
@@ -35,14 +35,14 @@
                 "alternateName": "PTS",
                 "description": "Colonize the solar system and the stars beyond: a pixel-retro space colonization game. Real orbits, probes, colony ships, 1,600 stars – populations grow exponentially until the resources run out.",
                 "url": "https://ithie.github.io/populate-the-stars-promo/",
-                "installUrl": "https://apps.apple.com/app/populate-the-stars/id6826905148",
-                "sameAs": ["https://apps.apple.com/app/populate-the-stars/id6826905148"],
                 "image": "https://ithie.github.io/populate-the-stars-promo/assets/og-image.jpg",
                 "screenshot": [
-                    "https://ithie.github.io/populate-the-stars-promo/screenshots/01-earth.png",
-                    "https://ithie.github.io/populate-the-stars-promo/screenshots/02-galaxy.png",
-                    "https://ithie.github.io/populate-the-stars-promo/screenshots/03-neighbours.png",
-                    "https://ithie.github.io/populate-the-stars-promo/screenshots/04-probe.png"
+                    "https://ithie.github.io/populate-the-stars-promo/screenshots/01-world.jpg",
+                    "https://ithie.github.io/populate-the-stars-promo/screenshots/02-system.jpg",
+                    "https://ithie.github.io/populate-the-stars-promo/screenshots/03-colony-ship.jpg",
+                    "https://ithie.github.io/populate-the-stars-promo/screenshots/04-freighter.jpg",
+                    "https://ithie.github.io/populate-the-stars-promo/screenshots/05-galaxy.jpg",
+                    "https://ithie.github.io/populate-the-stars-promo/screenshots/06-asteroid.jpg"
                 ],
                 "operatingSystem": "iOS",
                 "applicationCategory": "GameApplication",
@@ -168,7 +168,7 @@
                 scroll-padding: 0 6px;
             }
 
-            /* Wider than the text column, so all four fit on larger screens. */
+            /* Wider than the text column, so several fit side by side on larger screens. */
             .screenshots {
                 width: min(880px, calc(100vw - 32px));
             }
@@ -200,7 +200,7 @@
                 display: block;
                 width: min(200px, 44vw);
                 height: auto;
-                aspect-ratio: 1170 / 2532;
+                aspect-ratio: 1320 / 2868;
                 border: 1px solid #1a2238;
                 border-radius: 12px;
                 transition: border-color 0.2s;
@@ -286,6 +286,38 @@
                 opacity: 1;
             }
 
+            /* Until the release: stands in for the App Store badge (not a link). */
+            .soon {
+                margin: 0;
+                font-size: var(--ps-3);
+                line-height: 1.8;
+                letter-spacing: 2px;
+                color: var(--pop);
+                animation: soon-pulse 2.4s ease-in-out infinite;
+            }
+
+            @keyframes soon-pulse {
+                50% {
+                    /* 0.7 keeps the contrast above 4.5:1 */
+                    opacity: 0.7;
+                }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .soon {
+                    animation: none;
+                }
+            }
+
+            /* A plain link (no embedded player: nothing is loaded from YouTube until it is clicked). */
+            .yt-link {
+                display: block;
+                margin-top: 18px;
+                font-size: var(--ps-3);
+                letter-spacing: 1px;
+                color: var(--dim);
+            }
+
             .as-badge img {
                 display: block;
                 width: clamp(140px, 38vw, 180px);
@@ -313,38 +345,54 @@
             <h1>POPULATE<br />THE STARS</h1>
             <p class="tagline">
                 Colonize the galaxy.<br />
-                <span class="accent nowrap">Early Access</span> <span class="nowrap">· No Ads</span> <span class="nowrap">· No Tracking</span>
+                <span class="nowrap">No Ads</span> <span class="nowrap">· No Tracking</span>
             </p>
 
             <!-- Screenshots: preview in screenshots/small/ (400 px JPEG), original in screenshots/ (opened in the viewer). -->
             <section class="screenshots" aria-label="Screenshots">
                 <ul class="shots">
                     <li>
-                        <a href="screenshots/01-earth.png">
-                            <img src="screenshots/small/01-earth.jpg" width="400" height="865" loading="lazy" alt="Earth up close with its population and resource rings; the planet panel shows population, resources and mining and the buttons Send probe, Colonize and Supply route." />
+                        <a href="screenshots/01-world.jpg">
+                            <img src="screenshots/small/01-world.jpg" width="400" height="869" loading="lazy" alt="The colony world TOI-700 d up close with its population and resource rings; its panel shows population, resources, mining, a supply route and the buttons Send probe, Watch post, Colonize and Supply route." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/02-galaxy.png">
-                            <img src="screenshots/small/02-galaxy.jpg" width="400" height="865" loading="lazy" alt="The spiral galaxy with about 1,600 stars; our Sun, Sol, is marked on an outer arm." />
+                        <a href="screenshots/02-system.jpg">
+                            <img src="screenshots/small/02-system.jpg" width="400" height="869" loading="lazy" alt="The inner solar system: Earth, Mars and Mercury on their orbits, ships on their transfer paths and a space telescope keeping watch." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/03-neighbours.png">
-                            <img src="screenshots/small/03-neighbours.jpg" width="400" height="865" loading="lazy" alt="Neighbouring stars around Sol, among them Sirius, Barnard's Star, Vega, TRAPPIST-1 and Gliese 581." />
+                        <a href="screenshots/03-colony-ship.jpg">
+                            <img src="screenshots/small/03-colony-ship.jpg" width="400" height="869" loading="lazy" alt="A colony ship with its turning gravity ring on its way from Earth to Enceladus, with 4,653 settlers on board." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/04-probe.png">
-                            <img src="screenshots/small/04-probe.jpg" width="400" height="865" loading="lazy" alt="A probe on its way from Earth to Proxima Centauri b – arrival in 37 years." />
+                        <a href="screenshots/04-freighter.jpg">
+                            <img src="screenshots/small/04-freighter.jpg" width="400" height="869" loading="lazy" alt="A freighter on a supply route between two colonies of the red dwarf Gliese 1061, space telescopes on their orbits." />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="screenshots/05-galaxy.jpg">
+                            <img src="screenshots/small/05-galaxy.jpg" width="400" height="869" loading="lazy" alt="The spiral galaxy with about 1,600 stars; a wide region around Sol is settled, the colonies glow orange." />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="screenshots/06-asteroid.jpg">
+                            <img src="screenshots/small/06-asteroid.jpg" width="400" height="869" loading="lazy" alt="An asteroid heading for the colony TOI-700 d, impact in 5 days – the red border warns that a colony is in danger." />
                         </a>
                     </li>
                 </ul>
             </section>
 
+            <!-- Until the release: "coming soon" instead of the App Store badge. At launch, restore the badge below,
+                 the "apple-itunes-app" meta tag in the head and "installUrl" / "sameAs"
+                 (https://apps.apple.com/app/populate-the-stars/id6826905148) in the JSON-LD.
             <a class="as-badge" href="https://apps.apple.com/app/populate-the-stars/id6826905148" target="_blank" rel="noopener" aria-label="Download Populate the Stars on the App Store (opens in a new tab)">
                 <img src="assets/app-store-badge.svg" alt="" width="180" height="60" />
             </a>
+            -->
+            <p class="soon">COMING SOON<br />TO THE APP STORE</p>
+            <a class="yt-link" href="https://www.youtube.com/@MichaelDraws-k6n/shorts" target="_blank" rel="noopener" aria-label="Watch gameplay on YouTube (opens in a new tab)">▶ WATCH GAMEPLAY ON YOUTUBE</a>
         </main>
         <footer>
             <div class="links"><a id="legal-link" href="legal.html">IMPRINT · PRIVACY</a></div>
