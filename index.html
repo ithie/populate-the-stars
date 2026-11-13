@@ -338,6 +338,28 @@
             .made .heart {
                 color: #ff6600;
             }
+
+            /* Label: i.thie softworks */
+            .label {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: var(--ps-2);
+                letter-spacing: 2px;
+                color: var(--dim);
+            }
+
+            .label a {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .label img {
+                width: 40px;
+                height: auto;
+                image-rendering: pixelated;
+            }
         </style>
     </head>
     <body>
@@ -395,6 +417,10 @@
             <a class="yt-link" href="https://www.youtube.com/@MichaelDraws-k6n/shorts" target="_blank" rel="noopener" aria-label="Watch gameplay on YouTube (opens in a new tab)">▶ WATCH GAMEPLAY ON YOUTUBE</a>
         </main>
         <footer>
+            <div class="label">
+                A GAME BY
+                <a href="https://www.ithie-softworks.de/"><img src="assets/ithie-softworks.svg" width="40" height="40" alt="" />i.thie softworks</a>
+            </div>
             <div class="links"><a id="legal-link" href="legal.html">IMPRINT · PRIVACY</a></div>
             <div class="made">MADE WITH <span class="heart" role="img" aria-label="love">♥</span> IN JAVASCRIPT</div>
         </footer>
