@@ -19,13 +19,13 @@
         <meta property="og:image" content="https://www.populate-the-stars.com/assets/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, a colony world up close and the settled spiral galaxy" />
+        <meta property="og:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, Earth up close with its planet panel and the settled spiral galaxy" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Populate the Stars – Colonize the galaxy" />
         <meta name="twitter:description" content="Pixel-retro space colonization game for iPhone and Mac. No ads, no tracking." />
         <meta name="twitter:image" content="https://www.populate-the-stars.com/assets/og-image.jpg" />
-        <meta name="twitter:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, a colony world up close and the settled spiral galaxy" />
+        <meta name="twitter:image:alt" content="Populate the Stars: the glowing pixel title next to two game screenshots, Earth up close with its planet panel and the settled spiral galaxy" />
 
         <script type="application/ld+json">
             {
@@ -40,12 +40,15 @@
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
                 "image": "https://www.populate-the-stars.com/assets/og-image.jpg",
                 "screenshot": [
-                    "https://www.populate-the-stars.com/screenshots/01-world.jpg",
-                    "https://www.populate-the-stars.com/screenshots/02-system.jpg",
-                    "https://www.populate-the-stars.com/screenshots/03-colony-ship.jpg",
-                    "https://www.populate-the-stars.com/screenshots/04-freighter.jpg",
-                    "https://www.populate-the-stars.com/screenshots/05-galaxy.jpg",
-                    "https://www.populate-the-stars.com/screenshots/06-asteroid.jpg"
+                    "https://www.populate-the-stars.com/screenshots/01-solar-system.jpg",
+                    "https://www.populate-the-stars.com/screenshots/02-earth.jpg",
+                    "https://www.populate-the-stars.com/screenshots/03-probe.jpg",
+                    "https://www.populate-the-stars.com/screenshots/04-colony-ship.jpg",
+                    "https://www.populate-the-stars.com/screenshots/05-neighbours.jpg",
+                    "https://www.populate-the-stars.com/screenshots/06-colonies.jpg",
+                    "https://www.populate-the-stars.com/screenshots/07-gate.jpg",
+                    "https://www.populate-the-stars.com/screenshots/08-galaxy.jpg",
+                    "https://www.populate-the-stars.com/screenshots/09-compendium.jpg"
                 ],
                 "operatingSystem": "iOS",
                 "applicationCategory": "GameApplication",
@@ -197,7 +200,7 @@
                 display: block;
                 width: min(200px, 44vw);
                 height: auto;
-                aspect-ratio: 1320 / 2868;
+                aspect-ratio: 1206 / 2622;
                 border: 1px solid #1a2238;
                 border-radius: 12px;
                 transition: border-color 0.2s;
@@ -248,6 +251,19 @@
                 font-size: var(--ps-2);
                 line-height: 1.8;
                 text-align: center;
+            }
+
+            /* Read by screen readers, not shown. */
+            .viewer .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                overflow: hidden;
+                clip: rect(0 0 0 0);
+                white-space: nowrap;
+                border: 0;
             }
 
             .viewer .bar {
@@ -348,33 +364,48 @@
             <section class="screenshots" aria-label="Screenshots">
                 <ul class="shots">
                     <li>
-                        <a href="screenshots/01-world.jpg">
-                            <img src="screenshots/small/01-world.jpg" width="400" height="869" loading="lazy" alt="The colony world TOI-700 d up close with its population and resource rings; its panel shows population, resources, mining, a supply route and the buttons Send probe, Watch post, Colonize and Supply route." />
+                        <a href="screenshots/01-solar-system.jpg">
+                            <img src="screenshots/small/01-solar-system.jpg" width="400" height="869" loading="lazy" alt="The solar system seen from above: the Sun, Venus and Earth on their orbits; Venus and Mars are still unexplored and marked with a question mark." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/02-system.jpg">
-                            <img src="screenshots/small/02-system.jpg" width="400" height="869" loading="lazy" alt="The inner solar system: Earth, Mars and Mercury on their orbits, ships on their transfer paths and a space telescope keeping watch." />
+                        <a href="screenshots/02-earth.jpg">
+                            <img src="screenshots/small/02-earth.jpg" width="400" height="869" loading="lazy" alt="Earth up close with its population and resource rings; its panel shows population, resources and mining and the buttons Send probe, Watch post, Colonize, Supply route and Build defence." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/03-colony-ship.jpg">
-                            <img src="screenshots/small/03-colony-ship.jpg" width="400" height="869" loading="lazy" alt="A colony ship with its turning gravity ring on its way from Earth to Enceladus, with 4,653 settlers on board." />
+                        <a href="screenshots/03-probe.jpg">
+                            <img src="screenshots/small/03-probe.jpg" width="400" height="869" loading="lazy" alt="A probe on its way from Earth to Jupiter – arrival in 3 years." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/04-freighter.jpg">
-                            <img src="screenshots/small/04-freighter.jpg" width="400" height="869" loading="lazy" alt="A freighter on a supply route between two colonies of the red dwarf Gliese 1061, space telescopes on their orbits." />
+                        <a href="screenshots/04-colony-ship.jpg">
+                            <img src="screenshots/small/04-colony-ship.jpg" width="400" height="869" loading="lazy" alt="A colony ship on its way from Earth to Mars with 3,958 settlers and supplies on board, arrival in 147 days; around the Sun lies the asteroid belt." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/05-galaxy.jpg">
-                            <img src="screenshots/small/05-galaxy.jpg" width="400" height="869" loading="lazy" alt="The spiral galaxy with about 1,600 stars; a wide region around Sol is settled, the colonies glow orange." />
+                        <a href="screenshots/05-neighbours.jpg">
+                            <img src="screenshots/small/05-neighbours.jpg" width="400" height="869" loading="lazy" alt="Neighbouring stars around Sol, among them Sirius, Alpha Centauri, Barnard's Star, Tau Ceti and Vega." />
                         </a>
                     </li>
                     <li>
-                        <a href="screenshots/06-asteroid.jpg">
-                            <img src="screenshots/small/06-asteroid.jpg" width="400" height="869" loading="lazy" alt="An asteroid heading for the colony TOI-700 d, impact in 5 days – the red border warns that a colony is in danger." />
+                        <a href="screenshots/06-colonies.jpg">
+                            <img src="screenshots/small/06-colonies.jpg" width="400" height="869" loading="lazy" alt="A densely settled region of the galaxy: dozens of colonized star systems, marked with orange rings." />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="screenshots/07-gate.jpg">
+                            <img src="screenshots/small/07-gate.jpg" width="400" height="869" loading="lazy" alt="A gate in the Zethomor 236 system, open since the year 9780 and linked to 6 other gates." />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="screenshots/08-galaxy.jpg">
+                            <img src="screenshots/small/08-galaxy.jpg" width="400" height="869" loading="lazy" alt="The spiral galaxy with about 1,600 stars; a wide region is settled, the colonies glow orange." />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="screenshots/09-compendium.jpg">
+                            <img src="screenshots/small/09-compendium.jpg" width="400" height="869" loading="lazy" alt="The in-game compendium: its entry on asteroids explains collision courses, watch posts and interceptor probes." />
                         </a>
                     </li>
                 </ul>
@@ -394,9 +425,11 @@
             <div class="made">MADE WITH <span class="heart" role="img" aria-label="love">♥</span> IN JAVASCRIPT</div>
         </footer>
 
-        <dialog class="viewer" id="viewer" aria-labelledby="viewer-caption">
+        <dialog class="viewer" id="viewer" aria-label="Screenshot">
             <img id="viewer-img" alt="" />
-            <p id="viewer-caption"></p>
+            <!-- Visible: only "2 / 9". Screen readers get the description via the live region. -->
+            <p id="viewer-caption" aria-hidden="true"></p>
+            <p id="viewer-status" class="sr-only" aria-live="polite"></p>
             <div class="bar">
                 <button type="button" id="viewer-prev" aria-label="Previous screenshot">‹</button>
                 <button type="button" id="viewer-close" aria-label="Close">✕</button>
@@ -414,13 +447,17 @@
                 const viewer = document.getElementById('viewer');
                 const img = document.getElementById('viewer-img');
                 const caption = document.getElementById('viewer-caption');
+                const status = document.getElementById('viewer-status');
                 let current = 0;
                 const show = i => {
                     current = (i + links.length) % links.length;
                     const thumb = links[current].querySelector('img');
+                    const position = `Screenshot ${current + 1} of ${links.length}`;
                     img.src = links[current].href;
                     img.alt = thumb.alt;
-                    caption.textContent = `${current + 1} / ${links.length} – ${thumb.alt}`;
+                    caption.textContent = `${current + 1} / ${links.length}`;
+                    status.textContent = `${position}: ${thumb.alt}`;
+                    viewer.setAttribute('aria-label', position);
                 };
                 if (typeof viewer.showModal === 'function') {
                     links.forEach((a, i) =>

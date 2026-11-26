@@ -9,7 +9,7 @@ Live: <https://www.populate-the-stars.com/> – Deploy per GitHub Actions bei je
 | `index.html` | Promo-Seite |
 | `legal.html` | Impressum + Datenschutz, `?lang=de` · `en` · `fr` · `es` · `pt` · `pt-BR` (sonst Browsersprache) |
 | `assets/` | Icon, App-Store-Badge, `og-image.jpg` (1200 × 630, Vorschau für Social Media) |
-| `screenshots/` | Originale für die Lightbox (englische iPhone-Screenshots der 1.0, verkleinert auf 1080 × 2346), `small/` Vorschauen: `sips --resampleWidth 400 -s format jpeg -s formatOptions 82 01-world.jpg --out small/01-world.jpg` |
+| `screenshots/` | Originale für die Lightbox (aus `sol/screenshots/out-iphone/en`, 6,3″, verkleinert auf 1080 × 2348), `small/` Vorschauen: `sips --resampleWidth 400 -s format jpeg -s formatOptions 82 01-solar-system.jpg --out small/01-solar-system.jpg` |
 
 ## Generierte Teile
 
