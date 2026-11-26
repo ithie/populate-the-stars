@@ -7,7 +7,7 @@
         <meta name="description" content="Colonize the solar system and the stars beyond: a pixel-retro space colonization game for iPhone and Mac. Real orbits, probes, colony ships, 1,600 stars – populations grow exponentially until the resources run out. No ads, no tracking." />
         <meta name="theme-color" content="#020205" />
         <link rel="canonical" href="https://www.populate-the-stars.com/" />
-        <!-- At launch (see the App Store badge in the body): <meta name="apple-itunes-app" content="app-id=6826905148" /> -->
+        <meta name="apple-itunes-app" content="app-id=6826905148" />
         <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon.png" />
         <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
@@ -35,6 +35,9 @@
                 "alternateName": "PTS",
                 "description": "Colonize the solar system and the stars beyond: a pixel-retro space colonization game. Real orbits, probes, colony ships, 1,600 stars – populations grow exponentially until the resources run out.",
                 "url": "https://www.populate-the-stars.com/",
+                "installUrl": "https://apps.apple.com/app/populate-the-stars/id6826905148",
+                "sameAs": ["https://apps.apple.com/app/populate-the-stars/id6826905148"],
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
                 "image": "https://www.populate-the-stars.com/assets/og-image.jpg",
                 "screenshot": [
                     "https://www.populate-the-stars.com/screenshots/01-world.jpg",
@@ -68,8 +71,6 @@
                 --dim: #7a84a0;
                 --pop: #ffa02e;
                 --res: #3fd3c6;
-                --gold: #ffcf40;
-                --ps-1: 8px;
                 --ps-2: 10px;
                 --ps-3: 13px;
             }
@@ -150,10 +151,6 @@
                 font-size: var(--ps-2);
                 line-height: 2;
                 letter-spacing: 2px;
-            }
-
-            .tagline .accent {
-                color: var(--res);
             }
 
             .shots {
@@ -286,29 +283,6 @@
                 opacity: 1;
             }
 
-            /* Until the release: stands in for the App Store badge (not a link). */
-            .soon {
-                margin: 0;
-                font-size: var(--ps-3);
-                line-height: 1.8;
-                letter-spacing: 2px;
-                color: var(--pop);
-                animation: soon-pulse 2.4s ease-in-out infinite;
-            }
-
-            @keyframes soon-pulse {
-                50% {
-                    /* 0.7 keeps the contrast above 4.5:1 */
-                    opacity: 0.7;
-                }
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                .soon {
-                    animation: none;
-                }
-            }
-
             /* A plain link (no embedded player: nothing is loaded from YouTube until it is clicked). */
             .yt-link {
                 display: block;
@@ -406,14 +380,9 @@
                 </ul>
             </section>
 
-            <!-- Until the release: "coming soon" instead of the App Store badge. At launch, restore the badge below,
-                 the "apple-itunes-app" meta tag in the head and "installUrl" / "sameAs"
-                 (https://apps.apple.com/app/populate-the-stars/id6826905148) in the JSON-LD.
             <a class="as-badge" href="https://apps.apple.com/app/populate-the-stars/id6826905148" target="_blank" rel="noopener" aria-label="Download Populate the Stars on the App Store (opens in a new tab)">
                 <img src="assets/app-store-badge.svg" alt="" width="180" height="60" />
             </a>
-            -->
-            <p class="soon">COMING SOON<br />TO THE APP STORE</p>
             <a class="yt-link" href="https://www.youtube.com/@MichaelDraws-k6n/shorts" target="_blank" rel="noopener" aria-label="Watch gameplay on YouTube (opens in a new tab)">▶ WATCH GAMEPLAY ON YOUTUBE</a>
         </main>
         <footer>
